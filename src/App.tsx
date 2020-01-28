@@ -20,10 +20,10 @@ export default (): React.ReactElement => {
 
   return (
     <div>
-      Hello: {user?.displayName ?? "Anonymous"}
       {
         user ? (<button onClick={logout}>Logout</button>) : (<SignInScreen/>)
       }
+      {user ? (<pre>{JSON.stringify(user, null, "\t")}</pre>) : ""}
     </div>
   )
 };
