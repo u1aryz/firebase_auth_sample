@@ -15,7 +15,7 @@ export default (): React.ReactElement => {
   }, []);
 
   const logout = async (): Promise<void> => {
-    firebase.auth().signOut();
+    await firebase.auth().signOut();
   };
 
   return (
