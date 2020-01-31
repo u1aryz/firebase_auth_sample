@@ -5,7 +5,7 @@ const outputPath = path.resolve(__dirname, "public");
 
 module.exports = {
   mode: "development",
-  entry: "./src/Index.tsx",
+  entry: "./src/index.tsx",
   module: {
     rules: [
       {
