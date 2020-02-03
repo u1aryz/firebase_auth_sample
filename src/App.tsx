@@ -21,9 +21,17 @@ export default (): React.ReactElement => {
   return (
     <div>
       {
-        user ? (<button onClick={logout}>Logout</button>) : (<SignInScreen/>)
+        user ?
+          // Logged in
+          (
+            <>
+              <button onClick={logout}>Logout</button>
+              <pre>{JSON.stringify(user, null, "\t")}</pre>
+            </>
+          )
+          // Not login
+          : (<SignInScreen/>)
       }
-      {user ? (<pre>{JSON.stringify(user, null, "\t")}</pre>) : ""}
     </div>
   )
 };
